@@ -1,0 +1,20 @@
+{
+  "name": "phone-server",
+  "version": "1.0.0",
+  "description": "serving content for Jacob Knaack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app": "cross-env IP_ADDR=$(ifconfig | grep \"inet\" | tail -1 | awk '{print $2}') node index.js"
+  },
+  "author": "Jacob Knaack",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.18.9"
+  }
+}
